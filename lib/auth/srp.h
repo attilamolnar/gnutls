@@ -38,6 +38,8 @@ typedef struct gnutls_srp_server_credentials_st {
 	 * password files.
 	 */
 	gnutls_srp_server_credentials_function *pwd_callback;
+	gnutls_datum_t fake_salt_seed;
+	unsigned int fake_salt_length;
 } srp_server_cred_st;
 
 /* these structures should not use allocated data */
